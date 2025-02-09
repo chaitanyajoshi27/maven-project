@@ -6,12 +6,7 @@ pipeline{
           git 'https://github.com/chaitanyajoshi27/maven-project.git'
       }
     }
-    stage("Compile"){
-      steps{
-        
-      }
-    }
-    stage("Build"){
+    stage("Package"){
       steps{
         withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) {
         sh 'mvn package'
