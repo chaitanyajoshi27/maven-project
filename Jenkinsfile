@@ -13,12 +13,4 @@ pipeline{
         }
       }
     }
-    stage("Deploy"){
-      steps{
-        sshagent(['TomcatKey']) {
-          sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@13.232.209.14:/usr/share/tomcat/webapps'
-        }
-      }
-    }    
-  }
 }
