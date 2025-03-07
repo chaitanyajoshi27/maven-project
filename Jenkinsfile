@@ -21,7 +21,7 @@ pipeline{
     stage("Upload Image to DockerHub"){
       steps{
       withDockerRegistry(credentialsId: 'dockerhub_cred', url: 'https://index.docker.io/v1/') {
-          sh 'docker push chaitanyajoshi27/image918:v1.0'
+          sh 'docker push chaitanyajoshi27/image918:v2.0'
         }
       }
     }    
