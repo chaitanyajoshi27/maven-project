@@ -15,7 +15,7 @@ pipeline{
     }
     stage("Create Docker Image"){
       steps{
-        sh 'docker build -t chaitanyajoshi27/image918 .'
+        sh 'docker build -t chaitanyajoshi27/image918:v2.0 .'
       }
     }    
     stage("Upload Image to DockerHub"){
